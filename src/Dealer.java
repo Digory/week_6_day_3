@@ -40,6 +40,14 @@ public class Dealer {
         if(card1Ranking > card2Ranking){
             return card1;
         }
+        else if(card1Ranking == card2Ranking){
+            if(card1.getSuitType().getRanking() > card2.getSuitType().getRanking()){
+                return card1;
+            }
+            else{
+                return card2;
+            }
+        }
         else{
             return card2;
         }
